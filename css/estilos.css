@@ -1,16 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #000;
+    color: #00ff00;
 }
 
 :root {
-    --main-color: #16b93a;
+    --main-color: #00ff3788;
+    --secondary-color: #00ff00;
 }
 
-header, section, footer {
+header, section, footer, #idiomas, #informatica, #experiencia, #formacion-reglada, #formacion-complementaria {
     margin: 20px auto;
     width: 80%;
     max-width: 960px;
@@ -18,6 +19,9 @@ header, section, footer {
 
 header {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -29,12 +33,15 @@ h2 {
     padding-bottom: 5px;
 }
 
-section {
-    background-color: #fff;
+section, #idiomas, #informatica, #experiencia, #formacion-reglada, #formacion-complementaria {
+    background-color: #141414;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 50px;
+    box-shadow: 0 1px 20px rgba(255, 0, 0, 0.1);
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer {
@@ -44,148 +51,36 @@ footer {
     color: #fff;
 }
 
-#idiomas {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.languages-container {
+.languages-container, .skills-container, .experience-container, .education-container, .courses-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    gap: 100px;
 }
 
-.language {
+.language, .skill, .job, .degree, .course {
     display: flex;
     flex-direction: column;
+    justify-content:center;
     align-items: center;
-    background-color: #fff;
+    background-color: #1f1f1f;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 180px;
+    border-radius: 30px;
+    box-shadow: 0 0px 2px var(--secondary-color);
+    width: 280px;
     text-align: center;
+    transition: box-shadow 0.3s ease;
 }
 
-.language span {
-    font-size: 50px;
-    margin-bottom: 10px;
+.language:hover,
+.skill:hover,
+.job:hover,
+.degree:hover,
+.course:hover {
+    box-shadow: 0 0px 20px var(--secondary-color);
 }
 
-
-#informatica {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 180px;
-    text-align: center;
-}
-
-.skill span {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-#experiencia {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.experience-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.job {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 250px; /* Ajusta según necesidad */
-    text-align: center;
-}
-
-.job span {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-#formacion-reglada {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.education-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.degree {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 250px; /* Ajuste según necesidad */
-    text-align: center;
-}
-
-.degree span {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-#formacion-complementaria {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.courses-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.course {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 250px; /* Ajuste según necesidad */
-    text-align: center;
-}
-
-.course span {
-    font-size: 50px;
+.language span, .skill span, .job span, .degree span, .course span {
+    font-size: 100px;
     margin-bottom: 10px;
 }
